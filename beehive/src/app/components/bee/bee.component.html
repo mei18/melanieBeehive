@@ -1,0 +1,38 @@
+<div (click)='sendMe()'>
+
+
+  <hr>
+  <div class="user">
+    <div class="row">
+      <div class="userPhoto col-md-5">
+        <img src="{{bee.getAvatarUrl()}}" alt="">
+      </div>
+
+      <div class="data col-md-6">
+        <div class="userInfo">
+          <h4>{{ bee.getName() }}</h4>
+          <p>{{ bee.getUserName() }}</p>
+          <p>{{ bee.getEmail() }}</p>
+          <p>{{ bee.getPhone() }}</p>
+          <p>{{ bee.getAddress().getCity() }}</p>
+          <p> Prueba {{ bee.getId()}}</p>
+        </div>
+        <div class="row UserNumbers">
+          <ul>
+            <li class="liPost"><small>Post: {{ bee.getPosts().length }}. </small></li>
+            <div *ngIf='bee.getAlbum()'>
+              <li class="liPhoto"><small>Photos: {{ bee.getAlbum().getPhotos().length }}.</small></li>
+            </div>
+            <li class="liTodo"><small>Todos: {{ bee.getTodos().length }}.</small></li>
+          </ul>
+        </div>
+
+        <div class="row userButtons">
+          <button class="btn btn-sm" type="submit" (click)="showPosts()">Posts</button>
+          <button class="btn btn-sm" type="submit" (click)="showAlbum()">Album</button>
+          <button class="btn btn-sm" type="submit" (click)="showTodos()">Todos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

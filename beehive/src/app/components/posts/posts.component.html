@@ -1,0 +1,17 @@
+<div class="posts">
+  <div>
+    <h3>Bee's Posts</h3>
+  </div>
+  <div *ngIf='bee'>
+    <div *ngFor='let post of bee.getPosts()'>
+      <app-post [post]='post'></app-post>
+      <div *ngFor='let comment of post.getComments()'>
+        <app-comment [comment]='comment'></app-comment>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-block" type="button" (click)="addNewPost()">New Post</button>
+<div>
+  <app-new-post></app-new-post>
+</div>

@@ -1,0 +1,13 @@
+<div class="album">
+  <h3>Bee' s Album</h3>
+  <hr>
+  <!--si no esta null-->
+  <div *ngIf='bee'>
+    <div *ngIf='bee.getAlbum()'>
+      <h4 class="text-center">{{bee.getAlbum().getTitle()}}</h4>
+      <div *ngFor='let photo of bee.getAlbum().getPhotos()'>
+        <app-photo [photo]='photo'></app-photo>
+      </div>
+    </div>
+  </div>
+</div>

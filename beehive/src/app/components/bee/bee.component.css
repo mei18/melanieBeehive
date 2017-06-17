@@ -1,0 +1,34 @@
+.user {
+    position: relative;
+    width:100%
+}
+h4{
+    color: #A40060;
+}
+img {
+    display: inline-block;
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 5px;
+}
+
+
+.btn {
+    background-color: #6F2480;
+    color: white;
+     margin-left: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style-type: none;
+}
+
+li {
+    float: left;
+    margin-left: 10px;
+}
+

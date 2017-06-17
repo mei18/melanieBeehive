@@ -1,0 +1,5 @@
+<div class="wrapper">
+  <app-header></app-header>
+  <app-bees [bees]='bees' (sendReceivedBee)='recieveSelectedBee($event)'></app-bees>
+  <app-bee-activity [bee]='currentSelectedBee'></app-bee-activity>
+</div>

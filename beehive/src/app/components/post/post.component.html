@@ -1,0 +1,18 @@
+<div>
+  <hr>
+  <div class="userPosts">
+    <div>
+      <div class="title">
+        <h4>{{ post.getTitle() }}</h4>
+      </div>
+      <div class="body">
+        <h5>{{ post.getBody() }}</h5>
+        <p class="comment"><small>Comments: {{ post.getComments().length }}</small></p>
+      </div>
+    </div>
+    <button class="btn btn-block" type="button" (click)="clickComment()">New Comment</button>
+  </div>
+</div>
+<div>
+  <app-new-comment></app-new-comment>
+</div>

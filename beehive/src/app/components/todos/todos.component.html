@@ -1,0 +1,13 @@
+<div class="todos">
+  <h3>Bee's Todos</h3>
+  <div *ngIf='bee'>
+    <div *ngFor='let todo of bee.getTodos()'>
+      <app-todo [todo]='todo'></app-todo>
+    </div>
+  </div>
+</div>
+<button class="btn btn-block" type="submit">New Todo</button>
+
+<div>
+  <app-new-todo></app-new-todo>
+</div>
