@@ -1,6 +1,4 @@
 <div (click)='sendMe()'>
-
-
   <hr>
   <div class="user">
     <div class="row">
@@ -15,7 +13,6 @@
           <p>{{ bee.getEmail() }}</p>
           <p>{{ bee.getPhone() }}</p>
           <p>{{ bee.getAddress().getCity() }}</p>
-          <p> Prueba {{ bee.getId()}}</p>
         </div>
         <div class="row UserNumbers">
           <ul>
@@ -28,9 +25,9 @@
         </div>
 
         <div class="row userButtons">
-          <button class="btn btn-sm" type="submit" (click)="showPosts()">Posts</button>
-          <button class="btn btn-sm" type="submit" (click)="showAlbum()">Album</button>
-          <button class="btn btn-sm" type="submit" (click)="showTodos()">Todos</button>
+          <button class="btn btn-sm btn-block" type="submit" (click)="showPosts()">Posts</button>
+          <button class="btn btn-sm btn-block" type="submit" (click)="showAlbum()">Album</button>
+          <button class="btn btn-sm btn-block" type="submit" (click)="showTodos()">Todos</button>
         </div>
       </div>
     </div>

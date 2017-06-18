@@ -1,0 +1,22 @@
+.newPost {
+    border: 1px solid lightgrey;
+}
+h4{
+    color: #A40060;
+    text-align: center;
+}
+
+label {
+    color: #A40060;
+}
+.btn {
+    color: white;
+}
+
+.btn-add {
+    background-color: #005F97;
+}
+.btn-cancel {
+    background-color: #C82647;
+}
+

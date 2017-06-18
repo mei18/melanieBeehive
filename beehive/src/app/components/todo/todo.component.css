@@ -7,3 +7,9 @@ h4{
     background-color: #977BAB;
     color: white;
 }
+.completed {
+    color: #41A35B;
+}
+.btn-completed {
+    background-color: #41A35B;
+}

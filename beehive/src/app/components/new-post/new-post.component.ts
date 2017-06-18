@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Bee } from '../../models/bee';
 import { Post } from '../../models/post';
 import { Company } from '../../models/company';
@@ -16,12 +16,23 @@ import { Popup } from 'ng2-opd-popup';
   styleUrls: ['./new-post.component.css']
 })
 export class NewPostComponent implements OnInit {
-  @ViewChild('popup1') popup1: Popup;
+  @Input() bee;
+  @Input() post;
+  @Input() titlePost: string;
+  @Input() bodyPost: string;
+
+  newIdPost = 100 + 1;
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  addPost() {
+
+    this.bee.posts.push(new Post(this.newIdPost, this.bee.getId(), this.titlePost, this.bodyPost));
+    console.log(this.bee.getPosts());
+
+    this.titlePost = "";
+    this.bodyPost = "";
   }
-
-
-
 }

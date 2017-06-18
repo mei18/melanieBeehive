@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Bee } from '../../models/bee';
 import { Post } from '../../models/post';
 import { Company } from '../../models/company';
@@ -16,9 +16,13 @@ import { Comment } from '../../models/comment';
 })
 export class PostComponent implements OnInit {
   @Input() post;
-  @Input() comment;
+  @Input() bee;
 
   constructor() { }
 
   ngOnInit() { }
+
+  addNewComment() {
+    console.log("abrio");
+  }
 }

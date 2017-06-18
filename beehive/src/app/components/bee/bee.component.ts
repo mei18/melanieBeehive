@@ -18,32 +18,37 @@ import { Comment } from '../../models/comment';
 
 export class BeeComponent implements OnInit {
   @Input() bee;
-  @Input() posts;
-  @Input() album;
-  @Input() todos;
-  @Output() currentPosts = new EventEmitter();
-  @Output() currentAlbum = new EventEmitter();
-  @Output() currentTodos = new EventEmitter();
   @Output() sendBee = new EventEmitter();
-
+  isShowing;
+  mediaquery;
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
-  showPosts() {
-    this.currentPosts.emit(this.bee.getPosts());
-  }
-
-  showAlbum() {
-    this.currentAlbum.emit(this.bee.getAlbum());
-  }
-  showTodos() {
-    this.currentTodos.emit(this.bee.getTodos());
-  }
+  ngOnInit() { }
 
   sendMe() {
     this.sendBee.emit(this.bee);
   }
+
+  showPosts() {
+    this.isShowing = document.getElementById("posts").style.display = "block";
+    this.isShowing = document.getElementById("todos").style.display = "none";
+    this.isShowing = document.getElementById("album").style.display = "none";
+    this.isShowing = document.getElementById("btn").style.display = "none";
+  }
+
+  showAlbum() {
+    this.isShowing = document.getElementById("posts").style.display = "none";
+    this.isShowing = document.getElementById("todos").style.display = "none";
+    this.isShowing = document.getElementById("album").style.display = "block";
+    this.isShowing = document.getElementById("btn").style.display = "none";
+  }
+  showTodos() {
+    this.isShowing = document.getElementById("posts").style.display = "none";
+    this.isShowing = document.getElementById("todos").style.display = "block";
+    this.isShowing = document.getElementById("album").style.display = "none";
+    this.isShowing = document.getElementById("btn").style.display = "block";
+  }
+
+
 }

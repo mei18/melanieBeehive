@@ -1,3 +1,28 @@
-<p>
-  new-comment works!
-</p>
+<div class="modal fade" id="addModalComment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Comment</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titleComment">Title:</label>
+          <input type="text" class="form-control" id="titleComment" [(ngModel)]="titleComment" name="titleComment">
+        </div>
+        <div class="form-group">
+          <label for="bodyComment">Body:</label>
+          <textarea class="form-control" rows="3" id="bodyComment" [(ngModel)]="bodyComment" name="bodyComment"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="userEmail">Your Email:</label>
+          <input type="email" class="form-control" id="userEmail" [(ngModel)]="userEmail" name="userEmail">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-block btn-cancel" data-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-block btn-add" (click)="addComment(titleComment, bodyComment, userEmail)" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>

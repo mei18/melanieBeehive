@@ -10,9 +10,9 @@
         <p class="comment"><small>Comments: {{ post.getComments().length }}</small></p>
       </div>
     </div>
-    <button class="btn btn-block" type="button" (click)="clickComment()">New Comment</button>
+    <button class="btn btn-block" type="button" (click)="addNewComment(post.getId())" data-toggle="modal" data-target="#addModalComment">New Comment</button>
   </div>
 </div>
 <div>
-  <app-new-comment></app-new-comment>
+  <app-new-comment [bee]="bee" [post]="post" [comment]="post.getComments()"></app-new-comment>
 </div>

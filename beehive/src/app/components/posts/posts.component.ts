@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Bee } from '../../models/bee';
 import { Post } from '../../models/post';
 import { Company } from '../../models/company';
@@ -23,7 +23,6 @@ export class PostsComponent implements OnInit {
   ngOnInit() { }
 
   addNewPost() {
-    console.log("post");
-
+    console.log("open Modal");
   }
 }

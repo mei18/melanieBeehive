@@ -2,12 +2,11 @@
   <h3>Bee's Todos</h3>
   <div *ngIf='bee'>
     <div *ngFor='let todo of bee.getTodos()'>
-      <app-todo [todo]='todo'></app-todo>
+      <app-todo [todo]='todo' [bee]='bee'></app-todo>
+      <div>
+        <app-new-todo [bee]="bee" [todo]="todo"></app-new-todo>
+      </div>
     </div>
   </div>
 </div>
-<button class="btn btn-block" type="submit">New Todo</button>
-
-<div>
-  <app-new-todo></app-new-todo>
-</div>
+<button id="btn" class="btn btn-block" type="submit" (click)="addNewTodo()" data-toggle="modal" data-target="#addModalTodo">New Todo</button>

@@ -5,7 +5,7 @@ export class Todo {
     private title: string;
     private completed: boolean;
 
-    constructor(id: number, userId: number, title: string, completed: string) {
+    constructor(id: number, userId: number, title: string, completed: boolean) {
         this.setId(id);
         this.setUserid(userId);
         this.setTitle(title);

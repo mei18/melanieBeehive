@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Bee } from '../../models/bee';
 import { Post } from '../../models/post';
@@ -16,10 +16,20 @@ import { Comment } from '../../models/comment';
   styleUrls: ['./new-todo.component.css']
 })
 export class NewTodoComponent implements OnInit {
+  @Input() bee;
+  @Input() todo;
+  @Input() titleTodo: string
+  completed
+  newIdTodo = 200 + 1;
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  addTodo() {
+    this.completed = false;
+    this.bee.todos.push(new Todo(this.newIdTodo, this.bee.getId(), this.titleTodo, this.completed));
+    console.log(this.bee.todos);
+    this.titleTodo = "";
+  }
 }

@@ -1,5 +1,7 @@
 <hr>
 <div>
-  <h4>{{todo.getTitle()}}</h4>
-  <button class="btn btn-block" type="submit">Complete</button>
+  <h4 *ngIf="todo.getCompleted()" class="completed" id="titleTodo">{{todo.getTitle()}}</h4>
+  <h4 *ngIf="todo.getCompleted() == false" id="titleTodo">{{todo.getTitle()}}</h4>
+  <button *ngIf="todo.getCompleted()" id="btnTodo" class="btn btn-block btn-completed" type="submit" (click)="completeTodo()">Complete</button>
+  <button *ngIf="todo.getCompleted() == false" id="btnTodo" class="btn btn-block" type="submit" (click)="completeTodo()">Complete</button>
 </div>

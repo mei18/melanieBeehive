@@ -110,7 +110,7 @@ export class AppComponent {
       me.setAlbum(album);
       this.bees.push(me);
 
-      this.currentSelectedBee = this.bees[4];
+      this.currentSelectedBee = this.bees[0];
       this.isDataLoaded = true;
     });
   }
@@ -134,9 +134,9 @@ export class AppComponent {
       '../assets/data/comments.json');
   }
 
-  recieveSelectedBee(pBee: Bee) {
-    console.log(pBee);
+  recieveSelectedBee(Bee: Bee) {
+    console.log(Bee);
 
-    this.currentSelectedBee = pBee;
+    this.currentSelectedBee = Bee;
   }
 }

@@ -16,9 +16,12 @@ import { Comment } from '../../models/comment';
 })
 export class TodosComponent implements OnInit {
   @Input() bee;
+
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  addNewTodo() {
+
+  }
 }

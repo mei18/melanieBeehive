@@ -18,6 +18,7 @@ img {
     background-color: #6F2480;
     color: white;
      margin-left: 10px;
+     visibility: hidden;
 }
 
 ul {
@@ -30,5 +31,17 @@ ul {
 li {
     float: left;
     margin-left: 10px;
+}
+
+@media only screen and (max-width: 968px) {
+    /* For mobile phones: */
+    .user {
+        width: 50%;
+    }
+
+    .btn {
+     visibility: visible;
+}
+
 }
 

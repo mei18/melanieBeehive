@@ -16,9 +16,24 @@ import { Comment } from '../../models/comment';
 })
 export class TodoComponent implements OnInit {
   @Input() todo;
+  @Input() bee;
+  todoId;
+  textTodo;
+  btnTodo;
+  completed;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  completeTodo() {
+
+    this.todoId = this.todo.getId();
+    this.completed = this.todo.getCompleted();
+
+    if (this.completed == false) {
+      this.todo.setCompleted(true);
+    }
+  }
 }
